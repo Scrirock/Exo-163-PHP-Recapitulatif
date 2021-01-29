@@ -24,10 +24,9 @@
         
         $file = fopen("mail.txt", 'rb');
         while ($ligne = fgets($file)){
-
             echo $ligne."<br>";
         }
-
+        fclose($file);
     ?>
 
 </body>
