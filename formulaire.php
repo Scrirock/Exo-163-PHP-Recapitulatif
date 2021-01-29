@@ -18,7 +18,7 @@
     <?php
         if (!empty($_POST["mail"])){
             $date = new DateTime();
-            $mail = $_POST["mail"]."<====>".$date->format('H:i:s')."\n";
+            $mail = strip_tags($_POST["mail"]." envoyé a ".$date->format('H:i:s')."\n");
             file_put_contents("mail.txt", $mail, FILE_APPEND);
         }
         
